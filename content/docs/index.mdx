@@ -1,38 +1,32 @@
 ---
 title: Mémoire d'un admin
-description: Actuellement en formation "Administrateur Systèmes Réseaux et Sécurité". Je souhaite partager tous ce que j'ai pu apprendre durant ma formation à l'école IPI.
 ---
+import { Step, Steps } from 'fumadocs-ui/components/steps';
 
-## Une liste d'activités que je compte partager dans ce site web:
-- Powershell Scripts que j'ai pu m'en servir durant mon alternance.
-- Bash Scripts que j'ai pu créer durant ma formation à l'école IPI.
+<Callout type="warn">
+  Je ne suis pas un enseignant, ce sont des notes que j'ai prises pour moi-même.
+</Callout>
 
-## Pourquoi j'aime faire du scripting:
+Au cours de ma formation \"Administrateur Systèmes Réseaux et Sécurité\" à l’IPI, j’ai pris l’habitude de noter ce que j’apprenais : des scripts, des commandes utiles, des idées dans des fichiers Word.
 
-Le scripting me permet d'éviter les clics répétitifs et chronophages en automatisant mes tâches. Je peux ainsi me concentrer sur des tâches plus importantes et bénéficier de la flexibilité offerte par le scripting dans de nombreux domaines.
+![Alt text for the GIF](/images/word.png)
 
-De plus, le scripting peut aider à réduire les erreurs humaines en automatisant les tâches et en évitant les fautes de frappe ou d'autres erreurs qui peuvent survenir lors de la saisie manuelle des commandes.
+Mais finalement, j’ai préféré créer ce site pour centraliser mes notes et les rendre plus accessibles. 
 
-Exemple:
+C’est une manière simple de garder une trace de mon parcours + de mon évolution, et peut-être de partager un peu avec d’autres.
 
-Après avoir masterisé un PC portable neuf avec une image Windows de l'entreprise, nous installons le plus récent anti-virus ".msi" avec des paramètres par défaut sur le PC, donc au lieu d'aller dans le dossier partagé "ANTIVIRUS", double-cliquez sur le plus récent fichier d'install et puis cliquez sur "Suivant", "Accepter les termes et conditions"...
+## Contenus
+Les notes originales sont dans un format de fichier différent et ne sont pas en français. Par conséquent, cela prendra un certain temps pour les publier.
 
-J'ai mis en place ce script ".ps1" qui permet d'installer toujours le plus récent antivirus de manière silencieux et avec des paramètres par défaut. Donc, il n'y aura plus besoin de cliquer "Suivant" plusieurs fois.
+- Windows (PowerShell Scripts / Windows Server / Active Directory) 🟡
+- Linux (Bash Scripts / Debian) 🟡
+- Python ⚫
+- Git 🟡
+- NodeJS ⚫
+- SQL ⚫
 
-## SilentInstall.ps1
+<Callout type="tip">
+🟡 : La migration a commencé, mais elle n'est pas encore terminé.
 
-```ps1
-### Récupérer le plus récent fichier .msi ###
-
-$all_msi = Get-ChildItem -Path "\\adds01\ANTIVIRUS\" -Filter "*.msi" | Sort-Object LastWriteTime -Descending
-$newest = $all_msi[0].FullName
-
-Write-Host "Installation du plus récent ANTIVIRUS: $newest"
-
-### Installer le fichier .msi de manière silencieuse (pas d'interface graphique) ###
-
-Start-Process -FilePath "msiexec.exe" -ArgumentList "/i `"$newest`" /qn" -Wait
-
-Write-Host "Installation terminée."
-
-```
+⚫ : J'ai les notes, mais je ne les ai pas encore migrées vers Markdown.
+</Callout>

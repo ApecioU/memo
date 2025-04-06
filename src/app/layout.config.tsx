@@ -12,10 +12,10 @@ export const baseOptions: BaseLayoutProps = {
     title: (
       <>
         <img 
-          src="/images/favicon.png" 
+          src="/images/512icon.png" 
           alt="Logo" 
-          width={24} 
-          height={24} 
+          width={32} 
+          height={32} 
         />
         Memo
       </>
