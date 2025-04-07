@@ -6,6 +6,7 @@ const withMDX = createMDX();
 const config = {
   reactStrictMode: true,
   devIndicators: false,
+  allowedDevOrigins: ['https://memo.apescasio.fr'], // 👈 Add this line
 };
 
 export default withMDX(config);
